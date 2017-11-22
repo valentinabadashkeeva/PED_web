@@ -63,12 +63,14 @@ doplňte další odrážku `-text: Vaše jméno` a `href: odkaz_na_váš_soubor.
 
 18. Pushněte na github a vytvořte pull request
 
-* Pokud chcete synchronizovat svůj repozitář s původním repozitářem (https://github.com/hanel/PED_web), do kterého možná již přispěli vaši spolužáci, použijte následující skript
+* Pokud chcete synchronizovat svůj repozitář s původním repozitářem (https://github.com/hanel/PED_web), do kterého možná již přispěli vaši spolužáci, zkuste použít následující skript
 
-```{r eval=FALSE, echo = -2, eval = -3}
-# library(git2r)
-# repo = repository('')
-# repo = repository('cesta_k_vasemu_repozitari_v_pocitaci')
-# remote_add(repo)
+```{r eval=FALSE, echo = -2}
+library(git2r)
+repo = repository('/home/hanel/PED/PED_web/')
+repo = repository('cesta_k_vasemu_repozitari_v_pocitaci')
+if (!"upstream" %in% remotes(repo)) remote_add(repo, 'upstream', 'https://github.com/hanel/PED_web.git')
+fetch(repo, 'upstream')
+merge('master', 'upstream')
 ```
 

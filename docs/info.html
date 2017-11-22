@@ -257,11 +257,13 @@ title: &quot;Váš název&quot;
 <li><p>Pushněte na github a vytvořte pull request</p></li>
 </ol>
 <ul>
-<li>Pokud chcete synchronizovat svůj repozitář s původním repozitářem (<a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a>), do kterého možná již přispěli vaši spolužáci, použijte následující skript</li>
+<li>Pokud chcete synchronizovat svůj repozitář s původním repozitářem (<a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a>), do kterého možná již přispěli vaši spolužáci, zkuste použít následující skript</li>
 </ul>
-<pre class="r"><code># library(git2r)
-## # repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
-# remote_add(repo)</code></pre>
+<pre class="r"><code>library(git2r)
+repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
+if (!&quot;upstream&quot; %in% remotes(repo)) remote_add(repo, &#39;upstream&#39;, &#39;https://github.com/hanel/PED_web.git&#39;)
+fetch(repo, &#39;upstream&#39;)
+merge(&#39;master&#39;, &#39;upstream&#39;)</code></pre>
 </div>
 
 
