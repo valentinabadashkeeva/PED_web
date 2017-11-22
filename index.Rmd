@@ -2,6 +2,16 @@
 title: 'Prezentace environmentálních dat 2017/2018'
 ---
 
-Stránky prezentací se zimního semestru 2017/2018, 5. ročník Environmentální modelování.
+Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník Environmentální modelování
 
-Obsah
+
+
+## Abstrakty
+
+
+#### [Jan Petr](jp.html)
+
+![](img/jp.png)
+
+Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
+
