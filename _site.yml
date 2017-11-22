@@ -1,13 +1,18 @@
-name: "PED 2017/2018"
-output_dir: "doc"
+name: PED 2017/2018
 navbar:
-  title: "PED 2017/2018"
+  title: PED 2017/2018
   left:
-    - text: "Home"
-      href: index.html
-    - text: "Návod"
-      href: info.html
-    - text: Prezentace
-      menu: 
-        - text: Martin Hanel
-          href: mha.html
+  - text: Home
+    href: index.html
+  - text: Návod
+    href: info.html
+  - text: Prezentace
+    menu:
+    - text: Martin Hanel
+      href: mha.html
+output_dir: doc
+output:
+  html_document:
+    lib_dir: site_libs
+    self_contained: no
+
