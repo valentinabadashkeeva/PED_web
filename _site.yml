@@ -10,7 +10,7 @@ navbar:
     menu:
     - text: Martin Hanel
       href: mha.html
-output_dir: doc
+output_dir: docs
 output:
   html_document:
     lib_dir: site_libs
