@@ -234,7 +234,7 @@ $(document).ready(function () {
 <li>Pojmenujte ho např. vaším monogramem</li>
 <li><p>Hlavičku nechte ve tvaru (název upravte)</p></li>
 </ol>
-<pre class="yaml"><code>---
+<pre><code>---
 title: &quot;Váš název&quot;
 ---
 </code></pre>
@@ -242,14 +242,26 @@ title: &quot;Váš název&quot;
 <li>Do souboru napiště nějaký provizorní text</li>
 <li>Editací souboru <code>_site.yml</code> začleňte vaši prezentaci do menu, tj. v části hlavičky</li>
 </ol>
-<pre class="yaml"><code> - text: Prezentace
+<pre><code> - text: Prezentace
     menu:
     - text: Jan Petr
       href: jp.html</code></pre>
 <p>doplňte další odrážku <code>-text: Vaše jméno</code> a <code>href: odkaz_na_váš_soubor.html</code> (nezapomeňte, že přestože editujete soubor <code>odkaz_na_váš_soubor.Rmd</code>, zde se objeví již přeložený soubor <code>odkaz_na_váš_soubor.html</code>)</p>
-<ol start="11" style="list-style-type: decimal">
-<li></li>
+<ol start="12" style="list-style-type: decimal">
+<li>Projekt sestavte, v záložce Git zaregistrujte změny (Commit) - nezapomeňte přidat zprávu o tom, co jste udělali.</li>
+<li>Pomocí tlačitka Push projekt nahrajte na github</li>
+<li><p>Na githubu vytvořte nový pull request</p></li>
+<li><p>Kroky 12-13 průběžně opakujte, pokud budete chtít pracovat s repozitářem na jiném počítači, můžete jej synchronizovat pomocí tlačítka pull</p></li>
+<li><p>Dodělejte svou stránku</p></li>
+<li><p>Na hlavní stránce (<code>index.Rmd</code>) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci</p></li>
+<li><p>Pushněte na github a vytvořte pull request</p></li>
 </ol>
+<ul>
+<li>Pokud chcete synchronizovat svůj repozitář s původním repozitářem (<a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a>), do kterého možná již přispěli vaši spolužáci, použijte následující skript</li>
+</ul>
+<pre class="r"><code># library(git2r)
+## # repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
+# remote_add(repo)</code></pre>
 </div>
 
 

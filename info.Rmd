@@ -32,7 +32,7 @@ Prezentace bude:
 8. Pojmenujte ho např. vaším monogramem
 9. Hlavičku nechte ve tvaru (název upravte)
 
-```{yaml}
+```{}
 ---
 title: "Váš název"
 ---
@@ -42,7 +42,7 @@ title: "Váš název"
 10. Do souboru napiště nějaký provizorní text
 11. Editací souboru `_site.yml` začleňte vaši prezentaci do menu, tj. v části hlavičky
 
-```{yaml}
+```{}
  - text: Prezentace
     menu:
     - text: Jan Petr
@@ -66,9 +66,9 @@ doplňte další odrážku `-text: Vaše jméno` a `href: odkaz_na_váš_soubor.
 * Pokud chcete synchronizovat svůj repozitář s původním repozitářem (https://github.com/hanel/PED_web), do kterého možná již přispěli vaši spolužáci, použijte následující skript
 
 ```{r eval=FALSE, echo = -2, eval = -3}
-library(git2r)
-repo = repository('')
-repo = repository('cesta_k_vasemu_repozitari_v_pocitaci')
-remote_add(repo)
+# library(git2r)
+# repo = repository('')
+# repo = repository('cesta_k_vasemu_repozitari_v_pocitaci')
+# remote_add(repo)
 ```
 
