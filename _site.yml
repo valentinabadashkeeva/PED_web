@@ -1,8 +1,13 @@
-name: "my-website"
+name: "PED 2017/2018"
+output_dir: "doc"
 navbar:
-  title: "My Website"
+  title: "PED 2017/2018"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Návod"
+      href: info.html
+    - text: Prezentace
+      menu: 
+        - text: Martin Hanel
+          href: mha.html
