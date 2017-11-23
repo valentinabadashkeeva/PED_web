@@ -59,7 +59,7 @@ doplňte další odrážku `-text: Vaše jméno` a `href: odkaz_na_váš_soubor.
 
 16. Dodělejte svou stránku
 
-17. Na hlavní stránce (`index.Rmd`) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci 
+17. Na hlavní stránce (`index.Rmd`) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci. Pozn.: obrázek by měl mít šířku 200px - můžete buď upravit v grafickém editoru nebo obrázek vložit pomocí `<img src="img/VAS_OBRAZEK" style="width:200px"/>`
 
 18. Pushněte na github a vytvořte pull request
 
@@ -74,3 +74,11 @@ fetch(repo, 'upstream')
 merge('master', 'upstream')
 ```
 
+---
+
+### Zdroje:
+
+- Rmarkdown http://rmarkdown.rstudio.com/
+- Rmarkdown websites http://rmarkdown.rstudio.com/rmarkdown_websites.html
+- htmlwidgets http://www.htmlwidgets.org/
+- Github Guides https://guides.github.com/
