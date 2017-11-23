@@ -10,10 +10,13 @@ navbar:
     menu:
     - text: Jan Petr
       href: jp.html
+    - text: Valentina Badashkeeva
+      href: vb.html 
 output_dir: docs
 output:
   html_document:
-    theme: cosmo
+    css: 'style.css'
+    theme: united
     lib_dir: site_libs
     self_contained: no
 

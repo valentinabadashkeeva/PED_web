@@ -15,13 +15,13 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +30,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -66,6 +68,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -253,7 +256,7 @@ title: &quot;Váš název&quot;
 <li><p>Na githubu vytvořte nový pull request</p></li>
 <li><p>Kroky 12-13 průběžně opakujte, pokud budete chtít pracovat s repozitářem na jiném počítači, můžete jej synchronizovat pomocí tlačítka pull</p></li>
 <li><p>Dodělejte svou stránku</p></li>
-<li><p>Na hlavní stránce (<code>index.Rmd</code>) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci</p></li>
+<li><p>Na hlavní stránce (<code>index.Rmd</code>) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci. Pozn.: obrázek by měl mít šířku 200px - můžete buď upravit v grafickém editoru nebo obrázek vložit pomocí <code>&lt;img src=&quot;img/VAS_OBRAZEK&quot; style=&quot;width:200px&quot;/&gt;</code></p></li>
 <li><p>Pushněte na github a vytvořte pull request</p></li>
 </ol>
 <ul>
@@ -264,6 +267,16 @@ repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
 if (!&quot;upstream&quot; %in% remotes(repo)) remote_add(repo, &#39;upstream&#39;, &#39;https://github.com/hanel/PED_web.git&#39;)
 fetch(repo, &#39;upstream&#39;)
 merge(&#39;master&#39;, &#39;upstream&#39;)</code></pre>
+<hr />
+</div>
+<div id="zdroje" class="section level3">
+<h3>Zdroje:</h3>
+<ul>
+<li>Rmarkdown <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a></li>
+<li>Rmarkdown websites <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html" class="uri">http://rmarkdown.rstudio.com/rmarkdown_websites.html</a></li>
+<li>htmlwidgets <a href="http://www.htmlwidgets.org/" class="uri">http://www.htmlwidgets.org/</a></li>
+<li>Github Guides <a href="https://guides.github.com/" class="uri">https://guides.github.com/</a></li>
+</ul>
 </div>
 
 

@@ -1,0 +1,38 @@
+---
+title: "Časové řady"
+---
+
+Načteme časové řady ze složky `data` ze souboru `bilance.rds`:
+
+```{r message=FALSE}
+library(data.table)
+library(ggplot2)
+library(plotly)
+library(dygraphs)
+
+r = readRDS('./data/bilance.rds')
+r = r[UPOV_ID %in% sample(UPOV_ID, 10)]
+```
+
+
+A vykreslíme jednoduchý `ggplot`
+
+```{r}
+ggplot(r) + geom_line(aes(x = DTM, y = P, col = UPOV_ID))
+```
+
+Interaktivita pomocí `plotly`:
+
+```{r}
+g = ggplot(r) + geom_line(aes(x = DTM, y = P, col = UPOV_ID))
+ggplotly(g)
+```
+
+Interaktivita pomocí `dygraphs`:
+
+```{r}
+dr = r[UPOV_ID == UPOV_ID[1], ]
+dr[, UPOV_ID := NULL]
+dygraph(dr) %>% dyRangeSelector() 
+```
+
