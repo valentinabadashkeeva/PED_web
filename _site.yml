@@ -8,8 +8,8 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
-    - text: Jan Petr
-      href: jp.html
+    - text: Eva Zvonarova
+      href: ez.html
 output_dir: docs
 output:
   html_document:
@@ -17,4 +17,5 @@ output:
     theme: united
     lib_dir: site_libs
     self_contained: no
+    
 
