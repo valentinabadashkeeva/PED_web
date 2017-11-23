@@ -8,12 +8,13 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
-    - text: Jan Petr
-      href: jp.html
+    - text: Eliska Obdrzalkova
+      href: EO.html
 output_dir: docs
 output:
   html_document:
-    theme: cosmo
+    css: 'style.css'
+    theme: united
     lib_dir: site_libs
     self_contained: no
 
