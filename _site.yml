@@ -8,10 +8,8 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
-    - text: Jan Petr
-      href: jp.html
-    - text: Barbora Kalinová
-      href: bk.html
+    - text: Michal Předota
+      href: mp.html
 output_dir: docs
 output:
   html_document:
