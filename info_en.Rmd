@@ -51,9 +51,9 @@ title: "Your name"
 
 add another line `-text: Your name` and `href: link_of_your_file.html` (remember that although you are editing a link as `link_of_your_file.Rmd`, the compiled file will appear as `link_of_your_file.html`)
 
-12. Build the project on the Git tab to register changes (Commit) - be sure to add a message about what you did
-13. Press the push button to upload the project to github
-14. Create a new pull request on github
+12. Commit the changes in Git tab - be sure to add a message about what you did
+13. Press the push button to upload the project to github (your presonal repo)
+14. Create a new pull request on github to merge with the original repo
 
 15. Repeat steps 12-13, if you want to work with a repository on another computer, you can synchronize it with the pull button
 
@@ -61,7 +61,7 @@ add another line `-text: Your name` and `href: link_of_your_file.html` (remember
 
 17. On the main page  (`index.Rmd`) , fill in your name, some representative image and abstract for your work. Note: The image should have a width of 200px - you can either edit it in the image editor or paste the image using `<img src="img/YOUR_IMAGE" style="width:200px"/>`
 
-18. Push to github to create a pull request
+18. Push to github and create a pull request
 
 * If you want to synchronize your repository with the original repository (https://github.com/hanel/PED_web), to which your classmates may have already contributed, try using the following script
 
