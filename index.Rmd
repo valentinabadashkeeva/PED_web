@@ -4,14 +4,30 @@ title: 'Prezentace environmentálních dat 2017/2018'
 
 Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník Environmentální modelování
 
-
-
 ## Abstrakty
-
 
 #### [Jan Petr](jp.html)
 
 ![](img/jp.png)
 
 Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
+
+#### [Eva Zvonarova](ez.html)
+
+![](img/jp.png)
+
+Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
+
+#### [Eliska Obdrzalkova](EO.html)
+
+![](img/jp.png)
+
+blablalblalballablablaa
+
+#### [Michal Predota](mp.html)
+
+![](img/jp.png)
+
+blablalblalballablabla
+
 

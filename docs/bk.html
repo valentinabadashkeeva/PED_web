@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Barbora Kalinová" />
 
 
-<title>Zadání</title>
+<title>Vliv přípravku NEOSOL na nasycenou hydraulickou vodivost</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -212,75 +213,30 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Zadání</h1>
+<h1 class="title toc-ignore">Vliv přípravku NEOSOL na nasycenou hydraulickou vodivost</h1>
+<h4 class="author"><em>Barbora Kalinová</em></h4>
 
 </div>
 
 
-<p><strong>Vytvořte webovou prezenatci nějakého dílčího úkolu z vaší diplomové práce.</strong></p>
-<hr />
-<p><strong>Požadavky</strong></p>
-<p>Prezentace bude:</p>
-<ul>
-<li>takového rozsahu, aby o ní bylo možno cca 5-10 minut mluvit,</li>
-<li>bude kombinovat text, kód a grafiku</li>
-<li>bude začleněná do <a href="https://github.com/hanel/PED_web">tohoto</a> github repozitáře</li>
-</ul>
-<hr />
-<div id="postup" class="section level3">
-<h3>Postup</h3>
-<ol start="0" style="list-style-type: decimal">
-<li>Nainstalujte git</li>
-<li>Vytvořte si účet na <a href="https://github.com/" class="uri">https://github.com/</a></li>
-<li>Forkněte (tlačítko Fork) repo <a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a> do svého repozitáře</li>
-<li>Naklonujte své repo (tlačítko Clone or download) - zkopírujte adresu *.git</li>
-<li>V Rstudiu založte nový projekt z Version Control a adresu *.git vložte</li>
-<li>V Rstudiu pomocí tlačítka Pull repozitář stáhněte</li>
-<li><p>Pomocí ctrl+shift+b sestavte web (nebo záložka Build)</p></li>
-<li>V RStudiu vytvořte nový RMarkdown dokument</li>
-<li>Pojmenujte ho např. vaším monogramem</li>
-<li><p>Hlavičku nechte ve tvaru (název upravte)</p></li>
-</ol>
-<pre><code>---
-title: &quot;Váš název&quot;
----
-</code></pre>
-<ol start="10" style="list-style-type: decimal">
-<li>Do souboru napiště nějaký provizorní text</li>
-<li>Editací souboru <code>_site.yml</code> začleňte vaši prezentaci do menu, tj. v části hlavičky</li>
-</ol>
-<pre><code> - text: Prezentace
-    menu:
-    - text: Jan Petr
-      href: jp.html</code></pre>
-<p>doplňte další odrážku <code>-text: Vaše jméno</code> a <code>href: odkaz_na_váš_soubor.html</code> (nezapomeňte, že přestože editujete soubor <code>odkaz_na_váš_soubor.Rmd</code>, zde se objeví již přeložený soubor <code>odkaz_na_váš_soubor.html</code>)</p>
-<ol start="12" style="list-style-type: decimal">
-<li>Projekt sestavte, v záložce Git zaregistrujte změny (Commit) - nezapomeňte přidat zprávu o tom, co jste udělali.</li>
-<li>Pomocí tlačitka Push projekt nahrajte na github</li>
-<li><p>Na githubu vytvořte nový pull request</p></li>
-<li><p>Kroky 12-13 průběžně opakujte, pokud budete chtít pracovat s repozitářem na jiném počítači, můžete jej synchronizovat pomocí tlačítka pull</p></li>
-<li><p>Dodělejte svou stránku</p></li>
-<li><p>Na hlavní stránce (<code>index.Rmd</code>) doplňte Vaše jméno, nějaký reprezentativní obrázek a abstrakt k vaší práci. Pozn.: obrázek by měl mít šířku 200px - můžete buď upravit v grafickém editoru nebo obrázek vložit pomocí <code>&lt;img src=&quot;img/VAS_OBRAZEK&quot; style=&quot;width:200px&quot;/&gt;</code></p></li>
-<li><p>Pushněte na github a vytvořte pull request</p></li>
-</ol>
-<ul>
-<li>Pokud chcete synchronizovat svůj repozitář s původním repozitářem (<a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a>), do kterého možná již přispěli vaši spolužáci, zkuste použít následující skript</li>
-</ul>
-<pre class="r"><code>library(git2r)
-repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
-if (!&quot;upstream&quot; %in% remotes(repo)) remote_add(repo, &#39;upstream&#39;, &#39;https://github.com/hanel/PED_web.git&#39;)
-fetch(repo, &#39;upstream&#39;)
-merge(&#39;master&#39;, &#39;upstream&#39;)</code></pre>
-<hr />
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
 </div>
-<div id="zdroje" class="section level3">
-<h3>Zdroje:</h3>
-<ul>
-<li>Rmarkdown <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a></li>
-<li>Rmarkdown websites <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html" class="uri">http://rmarkdown.rstudio.com/rmarkdown_websites.html</a></li>
-<li>htmlwidgets <a href="http://www.htmlwidgets.org/" class="uri">http://www.htmlwidgets.org/</a></li>
-<li>Github Guides <a href="https://guides.github.com/" class="uri">https://guides.github.com/</a></li>
-</ul>
+<div id="including-plots" class="section level2">
+<h2>Including Plots</h2>
+<p>You can also embed plots, for example:</p>
+<p><img src="bk_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
 
 
