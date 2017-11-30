@@ -16,7 +16,6 @@ navbar:
       href: mp.html
     - text: Yannis Markonis
       href: ym.html
-
 output_dir: docs
 output:
   html_document:
