@@ -8,7 +8,9 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
-    - text: Michal Předota
+    - text: Jan Petr
+      href: jp.html
+    - text: Michal Predota
       href: mp.html
 output_dir: docs
 output:
