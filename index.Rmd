@@ -18,9 +18,16 @@ Ukázka využití interaktivních knihoven pro zobrazování časových řad. ..
 
 Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
 
+#### [Eliska Obdrzalkova](EO.html)
+
+![](img/jp.png)
+
+blablalblalballablablaa
+
 #### [Michal Predota](mp.html)
 
 ![](img/jp.png)
 
 blablalblalballablabla
+
 

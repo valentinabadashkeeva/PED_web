@@ -8,6 +8,8 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
+    - text: Eliska Obdrzalkova
+      href: EO.html
     - text: Eva Zvonarova
       href: ez.html
     - text: Barbora Kalinová
