@@ -10,6 +10,12 @@ navbar:
     menu:
     - text: Eva Zvonarova
       href: ez.html
+    - text: Barbora Kalinová
+      href: bk.html
+    - text: Michal Predota
+      href: mp.html
+    - text: Yannis Markonis
+      href: ym.html
 output_dir: docs
 output:
   html_document:

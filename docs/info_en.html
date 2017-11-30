@@ -11,7 +11,7 @@
 
 
 
-<title>Prezentace environmentálních dat 2017/2018</title>
+<title>Introduction</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -212,22 +212,75 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Prezentace environmentálních dat 2017/2018</h1>
+<h1 class="title toc-ignore">Introduction</h1>
 
 </div>
 
 
-<p>Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník Environmentální modelování</p>
-<div id="abstrakty" class="section level2">
-<h2>Abstrakty</h2>
-<div id="jan-petr" class="section level4">
-<h4><a href="jp.html">Jan Petr</a></h4>
-<div class="figure">
-<img src="img/jp.png" />
-
+<p><strong>Create a web presentation for a section of your diploma thesis.</strong></p>
+<hr />
+<p><strong>Requirements</strong></p>
+<p>The presentation will be:</p>
+<ul>
+<li>5-10 minutes long,</li>
+<li>will combine text, code, and graphics,</li>
+<li>will be incorporated into <a href="https://github.com/hanel/PED_web">this</a> github repository.</li>
+</ul>
+<hr />
+<div id="procedure" class="section level3">
+<h3>Procedure</h3>
+<ol start="0" style="list-style-type: decimal">
+<li>Install git</li>
+<li>Create an account at <a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>Fork (Fork button) repo <a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a> into your repository</li>
+<li>Clone your repo (Clone or download button) - Copy the *.git address</li>
+<li>In R Studio, create a new project from Version Control and insert *.git</li>
+<li>In R Studio, use the Pull button to download the repository</li>
+<li><p>Use ctrl + shift + b to build a web page (or the Build tab)</p></li>
+<li>Create a new RMarkdown document in RStudio</li>
+<li>Name it for example with your monogram</li>
+<li><p>Leave the head in shape (name edit)</p></li>
+</ol>
+<pre><code>---
+title: &quot;Your name&quot;
+---
+</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>Write some introductory text in the file</li>
+<li>Edit file <code>_site.yml</code> to add your presentation in the menu (in the header section)</li>
+</ol>
+<pre><code> - text: Presentation
+    menu:
+    - text: Jan Petr
+      href: jp.html</code></pre>
+<p>add another line <code>-text: Your name</code> and <code>href: link_of_your_file.html</code> (remember that although you are editing a link as <code>link_of_your_file.Rmd</code>, the compiled file will appear as <code>link_of_your_file.html</code>)</p>
+<ol start="12" style="list-style-type: decimal">
+<li>Commit the changes in Git tab - be sure to add a message about what you did</li>
+<li>Press the push button to upload the project to github (your presonal repo)</li>
+<li><p>Create a new pull request on github to merge with the original repo</p></li>
+<li><p>Repeat steps 12-13, if you want to work with a repository on another computer, you can synchronize it with the pull button</p></li>
+<li><p>Deliver your page.</p></li>
+<li><p>On the main page (<code>index.Rmd</code>) , fill in your name, some representative image and abstract for your work. Note: The image should have a width of 200px - you can either edit it in the image editor or paste the image using <code>&lt;img src=&quot;img/YOUR_IMAGE&quot; style=&quot;width:200px&quot;/&gt;</code></p></li>
+<li><p>Push to github and create a pull request</p></li>
+</ol>
+<ul>
+<li>If you want to synchronize your repository with the original repository (<a href="https://github.com/hanel/PED_web" class="uri">https://github.com/hanel/PED_web</a>), to which your classmates may have already contributed, try using the following script</li>
+</ul>
+<pre class="r"><code>library(git2r)
+repo = repository(&#39;cesta_k_vasemu_repozitari_v_pocitaci&#39;)
+if (!&quot;upstream&quot; %in% remotes(repo)) remote_add(repo, &#39;upstream&#39;, &#39;https://github.com/hanel/PED_web.git&#39;)
+fetch(repo, &#39;upstream&#39;)
+merge(&#39;master&#39;, &#39;upstream&#39;)</code></pre>
+<hr />
 </div>
-<p>Ukázka využití interaktivních knihoven pro zobrazování časových řad. …</p>
-</div>
+<div id="resources" class="section level3">
+<h3>Resources:</h3>
+<ul>
+<li>Rmarkdown <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a></li>
+<li>Rmarkdown websites <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html" class="uri">http://rmarkdown.rstudio.com/rmarkdown_websites.html</a></li>
+<li>htmlwidgets <a href="http://www.htmlwidgets.org/" class="uri">http://www.htmlwidgets.org/</a></li>
+<li>Github Guides <a href="https://guides.github.com/" class="uri">https://guides.github.com/</a></li>
+</ul>
 </div>
 
 
