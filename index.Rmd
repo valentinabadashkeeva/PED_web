@@ -19,4 +19,4 @@ Ukázka využití interaktivních knihoven pro zobrazování časových řad. ..
 
 ![](img/jp.png)
 
-blablalblalballablabla
+blablalblalballablablaa
