@@ -8,8 +8,8 @@ navbar:
     href: info.html
   - text: Prezentace
     menu:
-    - text: Jan Petr
-      href: jp.html
+    - text: Eva Zvonarova
+      href: ez.html
     - text: Barbora Kalinová
       href: bk.html
     - text: Michal Predota
@@ -23,4 +23,5 @@ output:
     theme: united
     lib_dir: site_libs
     self_contained: no
+    
 

@@ -1,12 +1,7 @@
 library(git2r)
 getwd()
-repo = repository("C:/Users/Zendoor/Documents/PED_web")
-config(repo, user.name = "xprem003", user.email = "zendoor@seznam.cz")
+
+repo = repository("C:/Users/Evka2/Desktop/ped_23_11/PED_web")
+config(repo, user.name = "xzvoe001", user.email = "zvonarova.eva@gmail.com")
 
 
-#library(git2r)
-#repo = repository('/home/hanel/PED/PED_web/')
-#repo = repository('C:/Users/Zendoor/Documents/PED_web')
-#if (!"upstream" %in% remotes(repo)) remote_add(repo, 'upstream', 'https://github.com/hanel/PED_web.git')
-#fetch(repo, 'upstream')
-#merge('master', 'upstream')
