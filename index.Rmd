@@ -15,3 +15,8 @@ Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník E
 
 Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
 
+#### [Eliska Obdrzalkova](EO.html)
+
+![](img/jp.png)
+
+Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
