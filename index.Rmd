@@ -15,3 +15,10 @@ Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník E
 
 Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
 
+
+#### [Jan Petr](jp.html)
+
+![](img/jp.png)
+
+Ukázka využití interaktivních knihoven pro zobrazování časových řad. ...
+
