@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Eva Zvonarova" />
 
 
-<title>Prezentace environmentálních dat 2017/2018</title>
+<title>XXX</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,8 +21,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -30,10 +31,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -190,13 +193,7 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="EO.html">Eliska Obdrzalkova</a>
-    </li>
-    <li>
-      <a href="bk.html">Barbora Kalinová</a>
-    </li>
-    <li>
-      <a href="ym.html">Yannis Markonis</a>
+      <a href="ez.html">Eva Zvonarova</a>
     </li>
   </ul>
 </li>
@@ -212,22 +209,31 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Prezentace environmentálních dat 2017/2018</h1>
+<h1 class="title toc-ignore">XXX</h1>
+<h4 class="author"><em>Eva Zvonarova</em></h4>
+<h4 class="date"><em>23 novembra 2017</em></h4>
 
 </div>
 
 
-<p>Stránky studentských prezentací ze zimního semestru 2017/2018, 5. ročník Environmentální modelování</p>
-<div id="abstrakty" class="section level2">
-<h2>Abstrakty</h2>
-<div id="jan-petr" class="section level4">
-<h4><a href="jp.html">Jan Petr</a></h4>
-<div class="figure">
-<img src="img/jp.png" />
-
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)</code></pre>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
 </div>
-<p>Ukázka využití interaktivních knihoven pro zobrazování časových řad. …</p>
-</div>
+<div id="including-plots" class="section level2">
+<h2>Including Plots</h2>
+<p>You can also embed plots, for example:</p>
+<p><img src="ez_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
 
 

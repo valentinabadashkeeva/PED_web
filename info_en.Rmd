@@ -1,0 +1,84 @@
+---
+title: "Introduction "
+---
+
+
+**Create a web presentation for a section of your diploma thesis.**
+
+---
+
+**Requirements**
+
+The presentation will be:
+
+- 5-10 minutes long,
+- will combine text, code, and graphics,
+- will be incorporated into [this](https://github.com/hanel/PED_web) github repository.   
+
+---
+
+### Procedure
+
+0. Install git
+1. Create an account at https://github.com/
+2. Fork (Fork button) repo https://github.com/hanel/PED_web into your repository
+3. Clone your repo (Clone or download button) - Copy the *.git address
+4. In R Studio, create a new project from Version Control and insert *.git
+5. In R Studio, use the Pull button to download the repository
+6. Use ctrl + shift + b to build a web page (or the Build tab)
+
+7. Create a new RMarkdown document in RStudio
+8. Name it for example with your monogram
+9. Leave the head in shape (name edit)
+
+
+```{}
+---
+title: "Your name"
+---
+
+```
+
+10. Write some introductory text in the file
+11. Edit file `_site.yml` to add your presentation in the menu (in the header section)
+
+```{}
+ - text: Presentation
+    menu:
+    - text: Jan Petr
+      href: jp.html
+```
+
+add another line `-text: Your name` and `href: link_of_your_file.html` (remember that although you are editing a link as `link_of_your_file.Rmd`, the compiled file will appear as `link_of_your_file.html`)
+
+12. Commit the changes in Git tab - be sure to add a message about what you did
+13. Press the push button to upload the project to github (your presonal repo)
+14. Create a new pull request on github to merge with the original repo
+
+15. Repeat steps 12-13, if you want to work with a repository on another computer, you can synchronize it with the pull button
+
+16. Deliver your page.
+
+17. On the main page  (`index.Rmd`) , fill in your name, some representative image and abstract for your work. Note: The image should have a width of 200px - you can either edit it in the image editor or paste the image using `<img src="img/YOUR_IMAGE" style="width:200px"/>`
+
+18. Push to github and create a pull request
+
+* If you want to synchronize your repository with the original repository (https://github.com/hanel/PED_web), to which your classmates may have already contributed, try using the following script
+
+```{r eval=FALSE, echo = -2}
+library(git2r)
+repo = repository('/home/hanel/PED/PED_web/')
+repo = repository('cesta_k_vasemu_repozitari_v_pocitaci')
+if (!"upstream" %in% remotes(repo)) remote_add(repo, 'upstream', 'https://github.com/hanel/PED_web.git')
+fetch(repo, 'upstream')
+merge('master', 'upstream')
+```
+
+---
+
+### Resources:
+
+- Rmarkdown http://rmarkdown.rstudio.com/
+- Rmarkdown websites http://rmarkdown.rstudio.com/rmarkdown_websites.html
+- htmlwidgets http://www.htmlwidgets.org/
+- Github Guides https://guides.github.com/
