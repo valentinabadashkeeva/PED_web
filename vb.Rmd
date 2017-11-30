@@ -2,15 +2,15 @@
 title: "Časové řady"
 ---
 
-Načteme časové řady ze složky `data` ze souboru `bilance.rds`:
+Načteme časové řady ze složky `data` ze souboru `bilance.rds`: 
 
 ```{r message=FALSE}
-library(data.table)
+library(data.table) ##
 library(ggplot2)
 library(plotly)
 library(dygraphs)
 
-r = readRDS('./data/bilance.rds')
+r = readRDS('./data/bilance.rds') 
 r = r[UPOV_ID %in% sample(UPOV_ID, 10)]
 ```
 
