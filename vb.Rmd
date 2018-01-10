@@ -1,38 +1,77 @@
 ---
-title: "Časové řady"
+title: "Numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany"
+output: html_document
 ---
 
-Načteme časové řady ze složky `data` ze souboru `bilance.rds`: 
+Ta
+to diplomové práce je numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany. 
 
-```{r message=FALSE}
-library(data.table) ##
+Popis znečišťujících látek emitovaných z JE Dukovany a analýza jejich vlivů na životní prostředí. 
+
+Vytvoření matematického modelu rozptylu znečišťujících látek pomocí zvoleného software (Ansys Fluent). 
+
+Simulace transportu znečišťujících příměsí emitovaných z JE Dukovany a analýza vlivu na člověka a životní prostředí.
+
+
+
+Načteme ze složky `data pro DP` ze souboru `HROT23/24/25/33/34/35_1g.xyz`: 
+
+```{r, message=FALSE}
+library(data.table)
 library(ggplot2)
 library(plotly)
-library(dygraphs)
+library(sp)
+require(raster)
+library(htmltools)
 
-r = readRDS('./data/bilance.rds') 
-r = r[UPOV_ID %in% sample(UPOV_ID, 10)]
+
+r1 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT23_1g.xyz')
+r2 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT24_1g.xyz')
+r3 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT25_1g.xyz')
+r4 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT33_1g.xyz')
+r5 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT34_1g.xyz')
+r6 = fread('C:/Users/Valyusha/Desktop/Diplomka/data pro DP/379154_DIP/DMP 1G_ txt(JTSK)/HROT35_1g.xyz')
+
+r= rbind(r1,r2,r3,r4,r5,r6)
+setnames(r, names(r), c('X', 'Y', 'Z'))
+r[, rX := round(X/80)*80]
+r[, rY := round(Y/80)*80]
+
+r[, length(unique(rX))]
+
+R = r[, .(mZ = mean(Z)), by = .(rX, rY)]
+
+rr = SpatialPointsDataFrame(list(x=R$rX, y=R$rY), data = data.frame(R$mZ))
+rrr = SpatialPixelsDataFrame(rr, data = data.frame(R$mZ))
+RR = raster(rrr)
+
+
+cl = colorRampPalette(c("blue", "green", "brown"))
+
+plot(RR,col=cl(4))
 ```
-
-
 A vykreslíme jednoduchý `ggplot`
 
 ```{r}
-ggplot(r) + geom_line(aes(x = DTM, y = P, col = UPOV_ID))
+
+ggg=ggplot(R)+geom_tile(aes(x=rX, y = rY, fill = cut(mZ, 8), color = cut(mZ, 8))) +scale_fill_brewer(palette = "YlOrRd")
+print(ggg)
 ```
 
 Interaktivita pomocí `plotly`:
 
-```{r}
-g = ggplot(r) + geom_line(aes(x = DTM, y = P, col = UPOV_ID))
+```{r, cache=TRUE}
+g=ggplot(R)+geom_tile(aes(x=rX, y = rY, fill =cut(mZ, 8), color = cut(mZ, 8))) +scale_fill_brewer(palette = "YlOrRd")+scale_color_brewer(palette = "YlOrRd")
+
 ggplotly(g)
 ```
 
-Interaktivita pomocí `dygraphs`:
+Interaktivita pomocí `histogram `:
 
 ```{r}
-dr = r[UPOV_ID == UPOV_ID[1], ]
-dr[, UPOV_ID := NULL]
-dygraph(dr) %>% dyRangeSelector() 
+gg = ggplot(R)+ geom_histogram(aes(x=mZ))
+
+ggplotly(gg)
 ```
+
 
