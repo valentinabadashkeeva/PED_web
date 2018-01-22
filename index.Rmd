@@ -24,7 +24,7 @@ Ukázka využití interaktivních knihoven pro zobrazování časových řad. ..
 
 blablalblalballablablaa
 
-#### [Michal Predota](mp.html)
+#### [Michal Predota](mp.html) 
 
 ![](img/jp.png)
 
@@ -32,6 +32,7 @@ blablalblalballablabla
 
 #### [Valentina Badashkeeva](vb.html)
 
+![](img/jp.png)
 
 blablalblalballablabla
 

@@ -3,7 +3,7 @@ title: "Numerické modelování rozptylu znečišťujících látek emitovaných
 output: html_document
 ---
 
-Tato diplomové práce je numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany. 
+Tato diplomové práce je numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany.  
 
 Popis znečišťujících látek emitovaných z JE Dukovany a analýza jejich vlivů na životní prostředí. 
 
