@@ -3,8 +3,7 @@ title: "Numerické modelování rozptylu znečišťujících látek emitovaných
 output: html_document
 ---
 
-Ta
-to diplomové práce je numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany. 
+Tato diplomové práce je numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany. 
 
 Popis znečišťujících látek emitovaných z JE Dukovany a analýza jejich vlivů na životní prostředí. 
 
@@ -12,7 +11,20 @@ Vytvoření matematického modelu rozptylu znečišťujících látek pomocí zv
 
 Simulace transportu znečišťujících příměsí emitovaných z JE Dukovany a analýza vlivu na člověka a životní prostředí.
 
+ 
+Na teto webove strance vám ukažu jenom zpracovaní dat pro digitální model povrchu ČR 1. generace (DMP 1G).
 
+Po nahraváni a ořiznuti tech dat dostavame plot,ggplot, plotly a histogram k temto datum. Pomoci kterých vidíme rozsah hadmořských vyšek na danem uzemí, co pak mužu použivát k své diplomové prace.
+
+Pomocí plot vidím model povrchu terenu, který jsem dostala podle nadmořských výšek(od 300 do 450, to co meně 300 je voda) na daném uzemi. 
+
+Pomocí ggplot vidím povrch terenu jako sít nadmořských výšek, kde každý čtverec má určitou barvu podle sve nadmořské vyški(od 275 do 451)
+
+Pomocí plotly dostavám interaktivitu modelu povrchu terenu podle nadmořských vyšek(275- 451) v jiné palitre barev.
+
+Na histogramu nadmořských výšek(300- 450) vidím množeství bodu(čtvercu), které jsou na tomto povrchu terena. Nejvetší množeství bodu s nadmožskou vyškou 350- 400.
+
+Na zavěr bych řekla, že pomocí vypracování dát v R Markdown vidím rozsách nadmořských vyšek a mužu to použit pro diplomovou práce.
 
 Načteme ze složky `data pro DP` ze souboru `HROT23/24/25/33/34/35_1g.xyz`: 
 
@@ -50,6 +62,8 @@ cl = colorRampPalette(c("blue", "green", "brown"))
 
 plot(RR,col=cl(4))
 ```
+
+
 A vykreslíme jednoduchý `ggplot`
 
 ```{r}
