@@ -1,5 +1,5 @@
 ---
-title: "Numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany"
+title: "Numerické modelování rozptylu znečišťujících látek emitovaných z JE Dukovany" 
 output: html_document
 ---
 
